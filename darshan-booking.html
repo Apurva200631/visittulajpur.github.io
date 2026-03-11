@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Tulja Bhavani Darshan Booking</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.booking-box{
+background:white;
+padding:30px;
+max-width:500px;
+margin:40px auto;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.booking-box input,
+.booking-box select{
+width:100%;
+padding:10px;
+margin:10px 0;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+.booking-box button{
+background:#8b0000;
+color:white;
+padding:10px 20px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+.booking-box button:hover{
+background:#a80000;
+}
+
+.confirmation{
+margin-top:20px;
+color:green;
+font-weight:bold;
+text-align:center;
+}
+
+</style>
+
+
+<script>
+
+function bookDarshan(){
+
+let name=document.getElementById("name").value;
+let date=document.getElementById("date").value;
+let type=document.getElementById("type").value;
+
+document.getElementById("result").innerHTML =
+"Darshan booking confirmed for " + name +
+" on " + date +
+" (" + type + " Darshan).";
+
+}
+
+</script>
+
+</head>
+
+
+<body>
+
+<header>
+<h1>Tulja Bhavani Temple Darshan Booking</h1>
+<p>Online Darshan Registration (Simulation)</p>
+</header>
+
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="temple.html">Temple</a>
+<a href="history.html">History</a>
+<a href="travel.html">Travel</a>
+<a href="gallery.html">Gallery</a>
+<a href="food.html">Food</a>
+<a href="temple-area-map.html">Temple Map</a>
+<a href="pilgrim-portal.html">Pilgrim Portal</a>
+<a href="darshan-booking.html">Darshan Booking</a>
+<a href="enquiry.html">Enquiry</a>
+
+</nav>
+
+
+<div class="container">
+
+<div class="booking-box">
+
+<h2>Book Your Darshan</h2>
+
+<label>Name</label>
+<input type="text" id="name" placeholder="Enter your name">
+
+<label>Select Date</label>
+<input type="date" id="date">
+
+<label>Darshan Type</label>
+<select id="type">
+
+<option>General Darshan</option>
+<option>Special Darshan</option>
+<option>VIP Darshan</option>
+
+</select>
+
+<label>Number of Devotees</label>
+<input type="number" placeholder="Enter number of devotees">
+
+<button onclick="bookDarshan()">Book Darshan</button>
+
+<p class="confirmation" id="result"></p>
+
+</div>
+
+</div>
+
+
+<footer>
+Tulja Bhavani Temple Darshan Booking Portal
+</footer>
+
+</body>
+
+</html>
