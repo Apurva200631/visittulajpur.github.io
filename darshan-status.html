@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Darshan Queue Status</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.status-box{
+background:white;
+padding:30px;
+margin:40px auto;
+width:400px;
+text-align:center;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.status{
+font-size:30px;
+color:#8b0000;
+margin-top:15px;
+}
+
+</style>
+
+<script>
+
+function updateStatus(){
+
+let people = Math.floor(Math.random()*500)+100;
+
+document.getElementById("queue").innerHTML =
+people + " Devotees waiting in queue";
+
+}
+
+setInterval(updateStatus,3000);
+
+</script>
+
+</head>
+
+<body>
+
+<header>
+<h1>Tulja Bhavani Darshan Queue Status</h1>
+</header>
+
+<div class="container">
+
+<div class="status-box">
+
+<p>Estimated Darshan Queue</p>
+
+<p class="status" id="queue">
+Loading queue status...
+</p>
+
+</div>
+
+</div>
+
+<footer>
+Temple Darshan Information Portal
+</footer>
+
+</body>
+
+</html>
